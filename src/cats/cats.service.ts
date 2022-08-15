@@ -6,7 +6,7 @@ import { createCatDto } from './dto/cats.dto';
 
 @Injectable()
 export class CatsService {
-    private readonly cats: createCatDto[] = [];
+    private cats: createCatDto[] = [];
 
     create(cat: createCatDto) {
         // inserir no banco de dados usando repository
@@ -19,16 +19,20 @@ export class CatsService {
     }
 
     findOne(id: number) {
-        return 'one cat'; //filter
+        const cat = this.cats.filter ((value) => value.id === id);
+        return this.cats.
     }
     remove(id: number) {
-        return (this.cats.delete(id)'Cat deleted'; //retira da lista e pronto
+        const cats_remove = this.cats.filter((value) => value.id != id);//etira da lista e pronto
     }
-    update(cat: createCatDto) {
+
+    update(createCatDto: createCatDto, id: number) {
         const cat = this.findOne(createCatDto.id);
     } //atualizar ele na lista
 
-            
+  
+    
+
  }
 
     
