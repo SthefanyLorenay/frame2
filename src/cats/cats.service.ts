@@ -23,7 +23,8 @@ export class CatsService {
         return this.cats.
     }
     remove(id: number) {
-        const cats_remove = this.cats.filter((value) => value.id != id);//etira da lista e pronto
+        const cats_remove = this.cats.filter((value) => value.id != id);
+        this.cats = cats_remove;//etira da lista e pronto
     }
 
     update(createCatDto: createCatDto, id: number) {
