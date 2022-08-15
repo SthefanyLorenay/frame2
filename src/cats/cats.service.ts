@@ -22,7 +22,7 @@ export class CatsService {
         return 'one cat'; //filter
     }
     remove(id: number) {
-        return 'Cat deleted'; //retira da lista e pronto
+        return (this.cats.delete(id)'Cat deleted'; //retira da lista e pronto
     }
     update(cat: createCatDto) {
         const cat = this.findOne(createCatDto.id);
