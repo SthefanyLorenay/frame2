@@ -24,11 +24,13 @@ export class CatsService {
     }
     remove(id: number) {
         const cats_remove = this.cats.filter((value) => value.id != id);
-        this.cats = cats_remove;//etira da lista e pronto
+        this.cats = cats_remove;//Retira da lista e pronto
     }
 
     update(createCatDto: createCatDto, id: number) {
         const cat = this.findOne(createCatDto.id);
+        this.cats.map ((cat) =>  );
+        //usar o map 
     } //atualizar ele na lista
 
   
